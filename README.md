@@ -48,7 +48,7 @@ A convergence test is [described in the manual](https://freegs.readthedocs.io/en
 Examples
 --------
 
-The Jupyter notebooks contain examples wuth additional notes
+The Jupyter notebooks contain examples with additional notes
 
 * MAST-example.ipynb 
 
@@ -98,6 +98,7 @@ The "freegs" module consists of the following files:
 * **machine.py**         - Represents the coils and power supply circuits
 * **multigrid.py**       - The multigrid solver for the linear elliptic operator
 * **picard.py**          - Nonlinear solver, iterating the profiles and constraints
+* **newtonk.py**         - Same as above
 * **plotting.py**        - Plotting routines using matplotlib
 
 License
