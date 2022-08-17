@@ -7,3 +7,4 @@
 *.egg-info
 todo.txt
 .vscode
+.DS_Store

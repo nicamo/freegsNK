@@ -36,7 +36,7 @@ profiles = freegs.jtor.ConstrainPaxisIp(1e3, # Plasma pressure on axis [Pascals]
 # Coil current constraints
 #
 # Specify locations of the X-points
-# to use to constrain coil currents
+# to use to constrain the initial value of all coil currents
 
 xpoints = [(1.1, -0.6),   # (R,Z) locations of X-points
            (1.1, 0.8)]
@@ -54,7 +54,7 @@ freegs.solve(eq,          # The equilibrium to adjust
 
 # eq now contains the solution
 
-# Currents in the coils
+# Currents in the coils from the above inverse problem
 print("Old coil currents and forces")
 print("----------------------------")
 tokamak.printCurrents()
@@ -67,11 +67,13 @@ ax.set_title('Old equilibrium')
 plt.show(block=False)
 
 #########################################
-# Perturb coil currents and recalculate
+# Now you can perturb the coil currents and solve a forward problem
+# by calling freegs.solve with constrain=None
 
 for _, coil in eq.tokamak.coils:
-    coil.control = False
     coil.current *= 1.5
+    # optionally, you can set
+    # coil.control = False
 freegs.solve(eq, profiles, constrain=None)
 
 print("\n\nNew coil currents and forces")
