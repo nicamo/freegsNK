@@ -87,8 +87,10 @@ Forward mode
 When running in forward mode, FreeGS uses a Newton-Krylov solver to calculate a
 Grad-Shafranov equilibrium given a set of coil currents and positions. For
 instance, this can be used to determine the change to an equiibrium if the
-currents in some or all of the coils are altered. An demonstration of this is
-shown in example 12.
+currents in some or all of the coils are altered. A demonstration of this is
+shown in example 12. A call to the Newton-Krylov solver is triggered by setting 
+``constrain=None`` when calling ``freegs.solve``.
+
 
 
 Shaped coils
