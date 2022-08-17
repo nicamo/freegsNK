@@ -4,4 +4,7 @@
 *.geqdsk
 *.pdf
 *.h5
-
+*.egg-info
+todo.txt
+.vscode
+.DS_Store
