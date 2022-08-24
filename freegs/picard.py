@@ -20,7 +20,7 @@ along with FreeGS.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 # modified by nicamo
-# solve function renamed Psolve to isolate from general solve call,
+# solve function renamed Psolve to isolate from general solve call in nonlinearsolve.py,
 # which can access both Picard and Newton Krylov methods
 
 from numpy import amin, amax, array
