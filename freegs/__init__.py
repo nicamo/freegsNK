@@ -39,7 +39,9 @@ from . import machine
 
 from . import control
 
-from .picard import solve
+from .nonlinearsolve import solve
+from .picard import Psolve
+from .newtonk import NKsolve
 
 from .dump import OutputFile
 
